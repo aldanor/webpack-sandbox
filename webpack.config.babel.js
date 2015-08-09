@@ -2,20 +2,18 @@ import webpack from 'webpack';
 
 let config = {
     entry: {
-        app: ['./app.js'],
-        vendor: ['./v1.js', './v2.js']
+        app: ['./app.js']
     },
     output: {
         path: './build',
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        chunkFilename: '[name].bundle.js'
     },
     module: {
         loaders: [],
         noParse: []
     },
-    plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js', Infinity),
-    ],
+    plugins: []
 };
 
 export default config;
