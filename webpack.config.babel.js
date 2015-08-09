@@ -10,7 +10,12 @@ let config = {
         chunkFilename: '[name].bundle.js'
     },
     module: {
-        loaders: [],
+        loaders: [
+            {
+                test: /v(1|2)\.js/,
+                loader: 'bundle?name=dynamic'
+            }
+        ],
         noParse: []
     },
     plugins: []

@@ -4,9 +4,9 @@ document.getElementsByTagName('body')[0].appendChild(div);
 
 function dynamic_require(name) {
     if (name == 'v1') {
-        require('bundle?name=dynamic!./v1');
+        require('./v1');
     } else if (name == 'v2') {
-        require('bundle?name=dynamic!./v2')
+        require('./v2');
     }
 }
 
